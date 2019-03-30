@@ -1,0 +1,32 @@
+<div  *ngFor="let i of productRes?.results">
+<div class="banner" [ngStyle]="{ 'background-image': 'url(http://localhost:8000/assets/img/content/' + i.banner_img + ')'}">
+    <div class="container">
+    <div class="banner-text">
+    <div class="banner-heading">
+        {{ i.banner_title }}
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+  <section class="details-card">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4 margin" *ngFor="let p of products?.results">
+                  <div class="card-content text-center">
+                      <div class="card-img">
+                          <img src="http://localhost:8000/assets/img/product/{{ p.image }}" alt="">
+                      </div>
+                      <div class="card-desc">
+                          <h3>{{ p.product_name }}</h3>
+                          <p>{{ (p.product_description.length>20)? (p.product_description | slice:20)+'...':(p.product_description) }}</p>
+                          <h4 class="harga">Mulai Dari Rp.{{ p.product_price | number }}</h4>
+                      </div>
+                      <div class="card-bottom">
+                            <a routerLink="/detail/{{ p.product_id }}" class="text-center">Selengkapnya <i class="fas fa-angle-double-right"></i></a>   
+                          </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>

@@ -1,0 +1,39 @@
+<div *ngFor="let a of about?.results">
+  <div class="banner" [ngStyle]="{ 'background-image': 'url(http://localhost:8000/assets/img/content/' + a.banner_img + ')'}">
+    <div class="container">
+      <div class="banner-text">
+        <div class="banner-heading">
+          {{ a.banner_heading }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row area-1">
+        <div class="col-sm-4">
+            <p class="title">{{ a.area_1_title }}</p>
+          </div>
+      <div class="col-sm-8">
+        <p>{{ a.area_1 }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row area-2">
+      <div class="col-sm-8">
+        <p>{{ a.area_2 }}</p>
+      </div>
+      <div class="col-sm-4">
+          <p class="title">{{ a.area_2_title }}</p>
+      </div>
+    </div>
+    <div class="row area-3">
+        <div class="col-sm-8">
+          <p>{{ a.area_3}}</p>
+        </div>
+        <div class="col-sm-4">
+            <p class="title">{{ a.area_3_title }}</p>
+        </div>
+      </div>
+  </div>
+</div>

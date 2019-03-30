@@ -1,0 +1,13 @@
+.navbar-brand{
+  font-size: 14pt;
+  font-weight: 600;
+  padding: 12px;
+}
+.nav-item{
+  margin-right: 20px;
+  font-weight: 400;
+  font-size: 11pt;
+}
+nav{
+  background-color: #292C2F !important;
+}

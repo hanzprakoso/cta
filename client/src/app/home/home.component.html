@@ -1,0 +1,60 @@
+<div  *ngFor="let i of indexRes?.results">
+<div class="banner" [ngStyle]="{ 'background-image': 'url(http://localhost:8000/assets/img/content/' + i.banner_img + ')'}">
+  <div class="container">
+  <div class="banner-text">
+  <div class="banner-heading">
+  {{ i.banner_heading }}
+  </div>
+  <div class="banner-sub-heading">
+  {{ i.banner_sub_heading }}
+  </div>
+  <!-- <button type="button" class="btn btn-warning text-dark btn-banner">Get started</button> -->
+  </div>
+  </div>
+</div>
+
+<!-- area 1 start -->
+<div class="area-1 container">
+  <h1 class="area-1-title">{{ i.area_1_title }}</h1>
+  <p class="area-1">{{ i.area_1 }}</p>
+  <p></p>
+</div>
+<!-- area 1 end -->
+
+<!-- product area / area 2 start -->
+<div class="area-2 container">
+<div class="title">
+<h2 class="text-center">Produk Kami</h2>
+</div>
+<div class="row">
+  <!-- <div class="col-md-4" *ngFor="let p of products.results;">
+  <div class="card">
+    <img class="card-img-top" src="http://localhost:8000/assets/img/product/{{ p.image}}" alt="Card image cap"> 
+    <div class="card-body">
+      <h5 class="card-title">{{ p.product_name }}</h5>
+      <p class="card-text desc">{{ p.product_description | slice:0:50}}...</p>
+      <a routerLink="/detail/{{ p.product_id }}" >Selengkapnya</a>
+    </div>
+  </div>
+</div> -->
+<div class="col-sm-4 product-card" *ngFor="let p of products?.results;">
+    <div class="card text-center">
+       <img class="card-img-top" src="http://localhost:8000/assets/img/product/{{ p.image}}" alt="Card image cap">
+       <div class="card-body">
+          <h5 class="card-title border-bottom pb-3">{{ p.product_name }}</h5>
+          <p class="card-text">{{ (p.product_description.length>20)? (p.product_description | slice:20)+'...':(p.product_description) }}</p>
+          <a routerLink="/detail/{{ p.product_id }}" class="text-center">Selengkapnya <i class="fas fa-angle-double-right"></i></a>
+       </div>
+    </div>
+ </div>
+</div>
+</div>
+<!-- product area / area 2 end -->
+
+<!--  area 3 start -->
+<div class="area-3 text-center"  [ngStyle]="{ 'background-image': 'url(http://localhost:8000/assets/img/content/' + i.area_3_bg + ')'}" style="object-fit: contain">
+  <h1 class="area-3-title">{{ i.area_3_title }}</h1>
+  <p>{{ i.area_3 }}</p>
+  <a routerLink="/contact" class="btn btn-success">Hubungi Kami</a>
+</div>
+</div>

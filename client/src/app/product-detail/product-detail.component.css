@@ -1,0 +1,30 @@
+h2.product-name{
+    color: #292C2F;
+    text-align: center;
+}
+.bg-grey{
+    background-color: #F8F8F8;
+}
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
+.cover{
+    object-fit: contain;
+    background-position: center center;
+    width: 100%;
+}
+.gallery-title
+{
+    font-size: 36px;
+    color: #292C2F;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}

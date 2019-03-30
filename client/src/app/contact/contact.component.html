@@ -1,0 +1,42 @@
+<div  *ngFor="let a of contact?.results">
+  <div class="banner" [ngStyle]="{ 'background-image': 'url(http://localhost:8000/assets/img/content/' + a.banner_img + ')'}">
+      <div class="container">
+      <div class="banner-text">
+        <div class="banner-heading">
+          {{ a.banner_heading }}
+          </div>
+      </div>
+      </div>
+    </div>
+<div id="contact" class="container-fluid bg-grey muncul">
+  <div class="page-subtitle">
+  <h4>{{ a.page_subtitle }}</h4>
+  <hr>
+</div>
+  <div class="row">
+    <div class="col-sm-5">
+      <p><span class="glyphicon glyphicon-map-marker"></span> {{ a.alamat }}</p>
+      <p><span class="glyphicon glyphicon-phone"></span> {{a.no_hp }}</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> {{a.email}}</p>
+    </div>
+    <div class="col-sm-7 muncul">
+        <form [formGroup]="messageForm" (ngSubmit)="onFormSubmit(messageForm.value)">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" formControlName="name" id="name" name="name" placeholder="Name" type="text"  required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" formControlName="email" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" formControlName="message" id="message" name="message" placeholder="Message" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button type="submit" class="btn btn-default pull-right">Send</button>
+        </div>
+      </div>
+        </form>
+    </div>
+  </div>
+</div>
+</div>

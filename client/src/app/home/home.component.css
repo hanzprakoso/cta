@@ -1,0 +1,136 @@
+.title h2{
+    font-size: 24px;
+    color: #222222;
+    margin: 3%;
+}
+.row{
+    padding: 40px;
+}
+.card{
+    border: none;
+}
+.card img{
+    height: 300px;
+    width: 100%;
+    object-fit: contain;
+}
+.card-body{
+    height: 100%;
+}
+div.row{
+    width: 100%;
+    padding: 0;
+}
+h5.card-title{
+    display: grid;
+    justify-self: center;
+    align-self: center;
+}
+p.desc{
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+/* banner */
+.banner{
+	text-align: center;
+    color: #fff;
+   
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.banner-text{
+	padding:200px 0 150px 0;
+}
+.banner-heading{
+	font-family: 'montserrat', sans-serif;
+	font-size: 75px;
+    font-weight: 700;
+    line-height: 100px;
+    margin-bottom: 30px;
+	color:#fff;
+}
+.banner-sub-heading{
+	font-family: 'montserrat', sans-serif;
+	font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 50px;
+	color:#fff;
+}
+
+.btn-banner{
+	padding:5px 20px;
+	border-radius:10px;
+	font-weight:700;
+	line-height:1.5;
+	text-align:center;
+	color:#fff;
+	text-transform:uppercase;
+}
+.area-1{
+    padding: 40px;
+}
+.area-1 h1, p{
+    text-align: center;
+}
+.area-3{
+    margin-top: 40px;
+    padding: 40px;
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    object-fit: cover;
+    color: white;
+    }
+.area-3 .btn{
+    align-items: center;
+    align-content: center;
+    margin-top: 40px;
+    align-self: center;
+    justify-self: center;
+}
+.area-1-title{
+    margin: 30px 30px 30px;;
+}
+/* mobile view */
+@media (max-width:500px)
+{
+.banner-text{
+	padding:150px 0 150px 0;
+}
+.banner-heading{
+	font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.banner-sub-heading{
+	font-size: 10px;
+    font-weight: 200;
+    line-height: 10px;
+    margin-bottom: 40px;
+}
+.area-3-title{
+ font-size: 13pt;   
+}
+}
+
+@media (max-width:768px){
+	.banner-text{
+	padding:150px 0 150px 0;
+}
+	.banner-sub-heading{
+	font-size: 23px;
+    font-weight: 200;
+    line-height: 23px;
+    margin-bottom: 40px;
+}
+}

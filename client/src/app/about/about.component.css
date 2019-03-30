@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300');
+
+.banner{
+	text-align: center;
+	color: #fff;   
+	height: 30%;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+	padding-top: 5%;
+}
+.banner-text{
+	margin-top: 50px;
+	display: grid;
+	justify-self: center;
+	align-self: center;
+}
+.banner-heading{
+	font-family: 'montserrat', sans-serif;
+	font-size: 50px;
+    font-weight: 500;
+    line-height: 100px;
+    margin-bottom: 30px;
+	color:#fff;
+}
+
+/* mobile view */
+@media (max-width:500px)
+{
+.banner{
+	padding-top: 10%;
+}
+.banner-text{
+	display: grid;
+	justify-self: center;
+	align-self: center;
+}
+}
+p.title{
+	font-family: 'Heebo', sans-serif;
+	text-align: center;
+	font-size: 32pt;
+}
+.visi-misi{
+	justify-self: center;
+	align-self: center;
+}
+.area-2, .area-3{
+	margin-bottom: 40px;
+}
+.row{
+	padding: 10px;
+}

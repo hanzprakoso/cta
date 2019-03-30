@@ -1,0 +1,32 @@
+<div class="container">
+<div class="row" *ngFor="let p of detail.product">
+  <div class="col-sm-4 cover">
+      <img src="http://localhost:8000/assets/img/product/{{ p.image }}" class="img-responsive" style="width: 100%;">
+  </div>
+  <div class="col-sm-8 bg-grey">
+    <h2 class="product-name">{{ p.product_name }}</h2>
+    <ul>
+      <li>{{ p.product_description }}</li>
+      <li>Harga Rp.{{ p.product_price | number}},-</li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+    <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1 class="gallery-title">Foto Produk</h1>
+    </div>
+  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6" *ngFor="let i of detail.image">
+    <img href="javascript:void(0);" class="image img-responsive" src="http://localhost:8000/assets/img/product/{{ i.img }}" style="width: 100%;">
+  </div>
+</div>
+<!-- gambar produk modal -->
+    <div class="modal fade" id="ImageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="product_image"></div>
+            <input type="hidden" name="product_id" class="form-control product_id2" required>
+ 	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+       </div>
+</div>
